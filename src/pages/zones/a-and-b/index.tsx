@@ -1,33 +1,34 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import {
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  Radio,
-  RadioGroup,
-} from "@mui/material";
 import { CardValidityForm } from "../../../components/CardValidityForm";
-
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
+import { Layout } from "../../../components/Layout";
+import { CardZoneValue } from "../../../hooks/use-card-zones";
+import { enTranslations } from "../../../translations/en/en-translations";
 
 const Page: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <CardValidityForm />
-    </main>
+    <Layout>
+      <CardValidityForm
+        zone={CardZoneValue.A_AND_B}
+        cardValidityTranslation={enTranslations.cardValidity}
+        estimatedPriceIsTranslation={enTranslations.estimatedPriceIs}
+        ninetyMinutesTranslation={enTranslations.ninetyMinutes}
+        oneDayTranslation={enTranslations.oneDay}
+        sevenDaysTranslation={enTranslations.sevenDays}
+        thirtyDaysTranslation={enTranslations.sevenDays}
+        youChooseTranslation={enTranslations.youChoose}
+        youChooseZoneAAndBTranslation={enTranslations.youChooseZoneAAndB}
+        youChooseZoneATranslation={enTranslations.youChooseZoneA}
+        youChooseZoneBTranslation={enTranslations.youChooseZoneB}
+      />
+    </Layout>
   );
 };
 
 export default Page;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>Beograd Plus</title>
+  </>
+);

@@ -20,6 +20,13 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-material-ui",
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
+        useLangKeyLayout: false,
+      },
+    },
   ],
 };
 

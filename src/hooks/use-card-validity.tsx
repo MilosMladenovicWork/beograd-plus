@@ -1,5 +1,7 @@
 import { FormControlLabelProps, RadioGroupProps } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
+import { CardZoneValue } from "./use-card-zones";
+import { useCardPricing } from "./use-card-pricing";
 
 enum NextPageUrls {
   VALIDITY_90_MINUTES = "./validity/90-minutes",
@@ -15,11 +17,20 @@ export enum CardValidityValue {
   THIRTY_DAYS = "30days",
 }
 
-export const useCardValidity = () => {
+export const cardValidityNames = {
+  [CardValidityValue.NINETY_MINUTES]: "90 minutes",
+  [CardValidityValue.ONE_DAY]: "1 day",
+  [CardValidityValue.SEVEN_DAYS]: "7 days",
+  [CardValidityValue.THIRTY_DAYS]: "30 days",
+};
+
+export const useCardValidity = ({ zone }: { zone: CardZoneValue }) => {
   const [nextPageUrl, setNextPageUrl] = useState<NextPageUrls>(
     NextPageUrls.VALIDITY_90_MINUTES
   );
-  const [selectedValidity, setSelectedValidity] = useState<CardValidityValue>();
+  const [selectedValidity, setSelectedValidity] = useState<CardValidityValue>(
+    CardValidityValue.NINETY_MINUTES
+  );
 
   const handleValidityOnChange = useCallback<
     NonNullable<RadioGroupProps["onChange"]>
@@ -48,8 +59,11 @@ export const useCardValidity = () => {
     }
   }, [selectedValidity]);
 
+  const { cardPricing } = useCardPricing(zone, selectedValidity);
+
   return {
     nextPageUrl,
     handleValidityOnChange,
+    selectedValidityEstimatedPricing: cardPricing,
   };
 };

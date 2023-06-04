@@ -4,7 +4,7 @@ import { ConfirmCardChoice } from "../../../../components/ConfirmCardChoice";
 import { CardZoneValue } from "../../../../hooks/use-card-zones";
 import { CardValidityValue } from "../../../../hooks/use-card-validity";
 import { Layout } from "../../../../components/Layout";
-import { enTranslations } from "../../../../translations/en/en-translations";
+import { rsTranslations } from "../../../../translations/en/rs-translations";
 
 const pageStyles = {
   color: "#232129",
@@ -19,31 +19,31 @@ const Page: React.FC<PageProps> = () => {
         zone={CardZoneValue.A}
         validity={CardValidityValue.ONE_DAY}
         afterSmsIsCreatedForYouTranslation={
-          enTranslations.afterSmsIsCreatedForYou
+          rsTranslations.afterSmsIsCreatedForYou
         }
         clickButtonBelowToAutomaticallyTranslation={
-          enTranslations.clickButtonBelowToAutomatically
+          rsTranslations.clickButtonBelowToAutomatically
         }
-        createSmsTranslation={enTranslations.createSms}
-        estimatedPriceIsTranslation={enTranslations.estimatedPriceIs}
-        orTranslation={enTranslations.or}
-        sendCodeTranslation={enTranslations.sendCode}
-        toPhoneNumberTranslation={enTranslations.toPhoneNumber}
+        createSmsTranslation={rsTranslations.createSms}
+        estimatedPriceIsTranslation={rsTranslations.estimatedPriceIs}
+        orTranslation={rsTranslations.or}
+        sendCodeTranslation={rsTranslations.sendCode}
+        toPhoneNumberTranslation={rsTranslations.toPhoneNumber}
         withValidityOfNinetyMinutesTranslation={
-          enTranslations.withValidityOfNinetyMinutes
+          rsTranslations.withValidityOfNinetyMinutes
         }
-        withValidityOfOneDayTranslation={enTranslations.withValidityOfOneDay}
+        withValidityOfOneDayTranslation={rsTranslations.withValidityOfOneDay}
         withValidityOfSevenDaysTranslation={
-          enTranslations.withValidityOfSevenDays
+          rsTranslations.withValidityOfSevenDays
         }
         withValidityOfThirtyDaysTranslation={
-          enTranslations.withValidityOfThirtyDays
+          rsTranslations.withValidityOfThirtyDays
         }
-        withValidityOfTranslation={enTranslations.withValidityOf}
-        youChooseTranslation={enTranslations.youChoose}
-        youChooseZoneAAndBTranslation={enTranslations.youChooseZoneAAndB}
-        youChooseZoneATranslation={enTranslations.youChooseZoneA}
-        youChooseZoneBTranslation={enTranslations.youChooseZoneB}
+        withValidityOfTranslation={rsTranslations.withValidityOf}
+        youChooseTranslation={rsTranslations.youChoose}
+        youChooseZoneAAndBTranslation={rsTranslations.youChooseZoneAAndB}
+        youChooseZoneATranslation={rsTranslations.youChooseZoneA}
+        youChooseZoneBTranslation={rsTranslations.youChooseZoneB}
       />
     </Layout>
   );

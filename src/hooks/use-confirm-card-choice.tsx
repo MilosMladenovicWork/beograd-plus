@@ -1,26 +1,11 @@
-import { FormControlLabelProps } from "@mui/material";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { CardZoneValue } from "./use-card-zones";
 import { CardValidityValue } from "./use-card-validity";
 import {
   OperatingSystem,
   useMobileOperatingSystem,
 } from "./use-mobile-operating-system";
-
-enum CardChoiceCode {
-  ZONE_A_VALIDITY_90_MINUTES = "A90",
-  ZONE_B_VALIDITY_90_MINUTES = "B90",
-  ZONE_A_AND_B_VALIDITY_90_MINUTES = "C90",
-  ZONE_A_VALIDITY_1_DAY = "A1",
-  ZONE_B_VALIDITY_1_DAY = "B1",
-  ZONE_A_AND_B_VALIDITY_1_DAY = "C1",
-  ZONE_A_VALIDITY_7_DAYS = "A7",
-  ZONE_B_VALIDITY_7_DAYS = "B7",
-  ZONE_A_AND_B_VALIDITY_7_DAYS = "C7",
-  ZONE_A_VALIDITY_30_DAYS = "A30",
-  ZONE_B_VALIDITY_30_DAYS = "B30",
-  ZONE_A_AND_B_VALIDITY_30_DAYS = "C30",
-}
+import { CardChoiceCode } from "../constants/card-choice-codes";
 
 const getSmsCode = (zone: CardZoneValue, validity: CardValidityValue) => {
   switch (zone) {
@@ -83,9 +68,9 @@ export const useConfirmCardChoice = (
 ) => {
   const operatingSystem = useMobileOperatingSystem();
 
-  const smsHref = useMemo(() => {
-    const smsCode = getSmsCode(zone, validity);
+  const smsCode = useMemo(() => getSmsCode(zone, validity), [zone, validity]);
 
+  const smsHref = useMemo(() => {
     switch (operatingSystem) {
       case OperatingSystem.ANDROID: {
         return `sms://${smsReceiverPhoneNumber}/?body=${smsCode}`;
@@ -94,9 +79,11 @@ export const useConfirmCardChoice = (
         return `sms://${smsReceiverPhoneNumber}/&body=${smsCode}`;
       }
     }
-  }, [operatingSystem]);
+  }, [operatingSystem, smsCode]);
 
   return {
     smsHref,
+    smsReceiverPhoneNumber,
+    smsCode,
   };
 };

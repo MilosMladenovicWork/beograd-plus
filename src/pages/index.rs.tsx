@@ -3,7 +3,7 @@ import type { HeadFC, PageProps } from "gatsby";
 import { Grid, Typography } from "@mui/material";
 import { CardZonesForm } from "../components/CardZonesForm";
 import { Layout } from "../components/Layout";
-import { enTranslations } from "../translations/en/en-translations";
+import { rsTranslations } from "../translations/en/rs-translations";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -11,27 +11,27 @@ const IndexPage: React.FC<PageProps> = () => {
       <Grid container rowSpacing={2}>
         <Grid item>
           <Typography>
-            {enTranslations.useThisAppToEasilyGenerateSms}
+            {rsTranslations.useThisAppToEasilyGenerateSms}
           </Typography>
         </Grid>
         <Grid item>
           <Typography variant="body2">
-            {enTranslations.afterAFewStepsAppWillGenerateSms}
+            {rsTranslations.afterAFewStepsAppWillGenerateSms}
           </Typography>
         </Grid>
         <Grid item>
           <CardZonesForm
-            cardZonesTranslation={enTranslations.cardZones}
+            cardZonesTranslation={rsTranslations.cardZones}
             estimatedPriceRangeDependingOnValidityTimeIsTranslation={
-              enTranslations.estimatedPriceRangeDependingOnValidityTimeIs
+              rsTranslations.estimatedPriceRangeDependingOnValidityTimeIs
             }
-            nextTranslation={enTranslations.next}
-            toTranslation={enTranslations.to}
+            nextTranslation={rsTranslations.next}
+            toTranslation={rsTranslations.to}
             yourCardWillBeValidInFollowingMunicipalitiesTranslation={
-              enTranslations.yourCardWillBeValidInFollowingMunicipalities
+              rsTranslations.yourCardWillBeValidInFollowingMunicipalities
             }
-            zoneATranslation={enTranslations.zoneA}
-            zoneBTranslation={enTranslations.zoneB}
+            zoneATranslation={rsTranslations.zoneA}
+            zoneBTranslation={rsTranslations.zoneB}
           />
         </Grid>
       </Grid>
