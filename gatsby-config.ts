@@ -17,6 +17,12 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "static/logo.png",
+        name: `Beograd Plus`,
+        short_name: `Beograd Plus`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
       },
     },
     "gatsby-plugin-material-ui",
