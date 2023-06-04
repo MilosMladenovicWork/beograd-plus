@@ -27,6 +27,14 @@ const config: GatsbyConfig = {
         useLangKeyLayout: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-9G7NVQGC92",
+        head: false,
+        enableWebVitalsTracking: true,
+      },
+    },
   ],
 };
 
