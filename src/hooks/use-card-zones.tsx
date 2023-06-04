@@ -45,10 +45,40 @@ const zoneBMunicipalities = [
   "Grocka (south of the road 347 Vrcin - Zaklopaca)",
 ];
 
+const zoneAMunicipalitiesRs = [
+  "Novi Beograd",
+  "Zemun",
+  "Stari grad",
+  "Savski venac",
+  "Vozdovac",
+  "Cukarica",
+  "Vracar",
+  "Rakovica",
+  "Palilula",
+  "Zvezdara",
+  "Surcin",
+  "Grocka (severno od puta 347 Brcin - Zaklopaca)",
+];
+
+const zoneBMunicipalitiesRs = [
+  "Lazarevac",
+  "Mladenovac",
+  "Obrenovac",
+  "Barajevo",
+  "Sopot",
+  "Grocka (juzno od puta 347 Vrcin - Zaklopaca)",
+];
+
 export const cardZoneMunicipalities: { [key in CardZoneValue]: string[] } = {
   [CardZoneValue.A]: zoneAMunicipalities,
   [CardZoneValue.B]: zoneBMunicipalities,
   [CardZoneValue.A_AND_B]: [...zoneAMunicipalities, ...zoneBMunicipalities],
+};
+
+export const cardZoneMunicipalitiesRs: { [key in CardZoneValue]: string[] } = {
+  [CardZoneValue.A]: zoneAMunicipalitiesRs,
+  [CardZoneValue.B]: zoneBMunicipalitiesRs,
+  [CardZoneValue.A_AND_B]: [...zoneAMunicipalitiesRs, ...zoneBMunicipalitiesRs],
 };
 
 const estimatedPricingPerZone = {

@@ -33,6 +33,7 @@ export const ConfirmCardChoice = ({
   clickButtonBelowToAutomaticallyTranslation,
   afterSmsIsCreatedForYouTranslation,
   createSmsTranslation,
+  cardZoneMunicipalities,
 }: {
   zone: CardZoneValue;
   validity: CardValidityValue;
@@ -52,6 +53,7 @@ export const ConfirmCardChoice = ({
   clickButtonBelowToAutomaticallyTranslation: string;
   afterSmsIsCreatedForYouTranslation: string;
   createSmsTranslation: string;
+  cardZoneMunicipalities: any;
 }) => {
   const { cardPricing } = useCardPricing(zone, validity);
   const { smsHref, smsCode, smsReceiverPhoneNumber } = useConfirmCardChoice(

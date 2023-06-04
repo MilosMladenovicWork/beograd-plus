@@ -36,4 +36,36 @@ export const enTranslations = {
     "click button below to automatically enter this information on your phone",
   afterSmsIsCreatedForYou: "After SMS is created for you, just click SEND",
   createSms: "Create SMS",
+  homePageDescription:
+    "Use this APP to easily generate SMS to buy Belgrade Plus bus ticket. After a few steps app will generate SMS with correct recipient and code needed for type of card you wanted to buy so you don't need to memorize them",
+  zoneAPageDescription:
+    "Buy a Belgrade Plus bus ticket for Zone A. Choose ticket validity time that suits you best: 90 minutes, 1 day, 7 days or 30 days.",
+  zoneBPageDescription:
+    "Buy a Belgrade Plus bus ticket for Zone B. Choose ticket validity time that suits you best: 90 minutes, 1 day, 7 days or 30 days.",
+  zoneAAndBPageDescription:
+    "Buy a Belgrade Plus bus ticket for Zone A and B. Choose ticket validity time that suits you best: 90 minutes, 1 day, 7 days or 30 days.",
+  zoneAValidity90MinutesDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A with validity time of 90 minutes. APP will automatically fill SMS on your mobile device.",
+  zoneAValidity1DayDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A with validity time of 1 day. APP will automatically fill SMS on your mobile device.",
+  zoneAValidity7DaysDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A with validity time of 7 days. APP will automatically fill SMS on your mobile device.",
+  zoneAValidity30DaysDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A with validity time of 30 days. APP will automatically fill SMS on your mobile device.",
+  zoneBValidity90MinutesDescription:
+    "Buy a Belgrade Plus bus ticked for Zone B with validity time of 90 minutes. APP will automatically fill SMS on your mobile device.",
+  zoneBValidity1DayDescription:
+    "Buy a Belgrade Plus bus ticked for Zone B with validity time of 1 day. APP will automatically fill SMS on your mobile device.",
+  zoneBValidity7DaysDescription:
+    "Buy a Belgrade Plus bus ticked for Zone B with validity time of 7 days. APP will automatically fill SMS on your mobile device.",
+  zoneBValidity30DaysDescription:
+    "Buy a Belgrade Plus bus ticked for Zone B with validity time of 30 days. APP will automatically fill SMS on your mobile device.",
+  zoneAAndBValidity90MinutesDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A and B with validity time of 90 minutes. APP will automatically fill SMS on your mobile device.",
+  zoneAAndBValidity1DayDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A and B with validity time of 1 day. APP will automatically fill SMS on your mobile device.",
+  zoneAAndBValidity7DaysDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A and B with validity time of 7 days. APP will automatically fill SMS on your mobile device.",
+  zoneAAndBValidity30DaysDescription:
+    "Buy a Belgrade Plus bus ticked for Zone A and B with validity time of 30 days. APP will automatically fill SMS on your mobile device.",
 };

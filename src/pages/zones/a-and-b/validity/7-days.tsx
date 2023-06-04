@@ -1,7 +1,10 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { ConfirmCardChoice } from "../../../../components/ConfirmCardChoice";
-import { CardZoneValue } from "../../../../hooks/use-card-zones";
+import {
+  CardZoneValue,
+  cardZoneMunicipalities,
+} from "../../../../hooks/use-card-zones";
 import { CardValidityValue } from "../../../../hooks/use-card-validity";
 import { Layout } from "../../../../components/Layout";
 import { enTranslations } from "../../../../translations/en/en-translations";
@@ -38,6 +41,7 @@ const Page: React.FC<PageProps> = () => {
         youChooseZoneAAndBTranslation={enTranslations.youChooseZoneAAndB}
         youChooseZoneATranslation={enTranslations.youChooseZoneA}
         youChooseZoneBTranslation={enTranslations.youChooseZoneB}
+        cardZoneMunicipalities={cardZoneMunicipalities}
       />
     </Layout>
   );
@@ -48,5 +52,9 @@ export default Page;
 export const Head: HeadFC = () => (
   <>
     <title>Beograd Plus</title>
+    <meta
+      name="description"
+      content={enTranslations.zoneAAndBValidity7DaysDescription}
+    />
   </>
 );

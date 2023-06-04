@@ -30,5 +30,6 @@ export default Page;
 export const Head: HeadFC = () => (
   <>
     <title>Beograd Plus</title>
+    <meta name="description" content={rsTranslations.zoneBPageDescription} />
   </>
 );
