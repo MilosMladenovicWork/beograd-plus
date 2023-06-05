@@ -1,14 +1,7 @@
 import * as React from "react";
 import { Button } from "gatsby-theme-material-ui";
-import {
-  CardZoneValue,
-  cardZoneMunicipalities,
-  cardZoneNames,
-} from "../hooks/use-card-zones";
-import {
-  CardValidityValue,
-  cardValidityNames,
-} from "../hooks/use-card-validity";
+import { CardZoneValue } from "../hooks/use-card-zones";
+import { CardValidityValue } from "../hooks/use-card-validity";
 import { useConfirmCardChoice } from "../hooks/use-confirm-card-choice";
 import { Grid, Typography } from "@mui/material";
 import { useCardPricing } from "../hooks/use-card-pricing";
@@ -96,7 +89,7 @@ export const ConfirmCardChoice = ({
     <Grid container rowSpacing={3}>
       <Grid item container rowSpacing={1}>
         <Grid item>
-          <Typography>
+          <Typography variant="h1" sx={{ fontSize: 16 }}>
             {youChooseTranslation} <b>{chosenZone}</b>:
           </Typography>
           <Typography variant="body2">

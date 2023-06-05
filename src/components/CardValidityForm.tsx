@@ -61,7 +61,7 @@ export const CardValidityForm = ({
   return (
     <Grid container rowSpacing={3}>
       <Grid item xs={12}>
-        <Typography>
+        <Typography variant="h1" sx={{ fontSize: 16 }}>
           {youChooseTranslation} <b>{chosenZone}</b>
         </Typography>
       </Grid>

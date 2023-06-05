@@ -9,17 +9,17 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Grid container rowSpacing={2}>
-        <Grid item>
-          <Typography>
+        <Grid item xs={12}>
+          <Typography variant="h1" sx={{ fontSize: 16 }}>
             {enTranslations.useThisAppToEasilyGenerateSms}
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={12}>
           <Typography variant="body2">
             {enTranslations.afterAFewStepsAppWillGenerateSms}
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={12}>
           <CardZonesForm
             cardZonesTranslation={enTranslations.cardZones}
             estimatedPriceRangeDependingOnValidityTimeIsTranslation={
