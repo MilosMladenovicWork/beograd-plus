@@ -15,7 +15,7 @@ const Page: React.FC<PageProps> = () => {
         ninetyMinutesTranslation={rsTranslations.ninetyMinutes}
         oneDayTranslation={rsTranslations.oneDay}
         sevenDaysTranslation={rsTranslations.sevenDays}
-        thirtyDaysTranslation={rsTranslations.sevenDays}
+        thirtyDaysTranslation={rsTranslations.thirtyDays}
         youChooseTranslation={rsTranslations.youChoose}
         youChooseZoneAAndBTranslation={rsTranslations.youChooseZoneAAndB}
         youChooseZoneATranslation={rsTranslations.youChooseZoneA}
